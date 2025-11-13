@@ -66,7 +66,6 @@ Contains plots and summaries for:
 ├── data/
 ├── utils/
 └── README.md
-
 ---
 
 ## Requirements
