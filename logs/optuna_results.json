@@ -1,0 +1,311 @@
+{
+  "baseline": {
+    "lr": 0.0001,
+    "weight_decay": 0.0,
+    "s": 30.0,
+    "label_smoothing": 0.0,
+    "batch_size": 32
+  },
+  "search_space": {
+    "lr": {
+      "type": "log_float",
+      "low": 3e-05,
+      "high": 0.0005
+    },
+    "weight_decay": {
+      "type": "categorical",
+      "choices": [
+        0.0,
+        1e-06,
+        1e-05,
+        5e-05,
+        0.0001,
+        0.0003
+      ]
+    },
+    "s": {
+      "type": "categorical",
+      "choices": [
+        10,
+        16,
+        24,
+        30,
+        40,
+        64
+      ]
+    },
+    "label_smoothing": {
+      "type": "categorical",
+      "choices": [
+        0.0,
+        0.05,
+        0.1,
+        0.15
+      ]
+    },
+    "batch_size": {
+      "type": "categorical",
+      "choices": [
+        16,
+        32,
+        48,
+        64
+      ]
+    }
+  },
+  "sampler": "TPE",
+  "order": [
+    "joint"
+  ],
+  "trials": [
+    {
+      "trial_id": "optuna_trial_0",
+      "status": "ok",
+      "config": {
+        "lr": 0.0001,
+        "weight_decay": 0.0,
+        "s": 30.0,
+        "label_smoothing": 0.0,
+        "batch_size": 32
+      },
+      "best_epoch": 30,
+      "best_val_acc": 0.9068627450980392,
+      "best_val_loss": 0.35314313042908907,
+      "ckpt_path": "ckpt\\optuna\\trial_0\\best.pth"
+    },
+    {
+      "trial_id": "optuna_trial_1",
+      "status": "ok",
+      "config": {
+        "lr": 3.3671754807384405e-05,
+        "weight_decay": 0.0003,
+        "s": 10.0,
+        "label_smoothing": 0.15,
+        "batch_size": 32
+      },
+      "best_epoch": 30,
+      "best_val_acc": 0.9117647058823529,
+      "best_val_loss": 1.7290941402316093,
+      "ckpt_path": "ckpt\\optuna\\trial_1\\best.pth"
+    },
+    {
+      "trial_id": "optuna_trial_2",
+      "status": "ok",
+      "config": {
+        "lr": 0.00014822931393263563,
+        "weight_decay": 0.0001,
+        "s": 10.0,
+        "label_smoothing": 0.05,
+        "batch_size": 16
+      },
+      "best_epoch": 27,
+      "best_val_acc": 0.9235294117647059,
+      "best_val_loss": 0.7588949874043465,
+      "ckpt_path": "ckpt\\optuna\\trial_2\\best.pth"
+    },
+    {
+      "trial_id": "optuna_trial_3",
+      "status": "ok",
+      "config": {
+        "lr": 9.945714223390576e-05,
+        "weight_decay": 0.0,
+        "s": 64.0,
+        "label_smoothing": 0.05,
+        "batch_size": 64
+      },
+      "best_epoch": 30,
+      "best_val_acc": 0.8666666666666667,
+      "best_val_loss": 1.0500703305006027,
+      "ckpt_path": "ckpt\\optuna\\trial_3\\best.pth"
+    },
+    {
+      "trial_id": "optuna_trial_4",
+      "status": "ok",
+      "config": {
+        "lr": 0.0004410494159293018,
+        "weight_decay": 1e-05,
+        "s": 40.0,
+        "label_smoothing": 0.0,
+        "batch_size": 16
+      },
+      "best_epoch": 23,
+      "best_val_acc": 0.9343137254901961,
+      "best_val_loss": 0.24128621781710535,
+      "ckpt_path": "ckpt\\optuna\\trial_4\\best.pth"
+    },
+    {
+      "trial_id": "optuna_trial_5",
+      "status": "ok",
+      "config": {
+        "lr": 0.0002186537588868249,
+        "weight_decay": 0.0001,
+        "s": 40.0,
+        "label_smoothing": 0.1,
+        "batch_size": 64
+      },
+      "best_epoch": 22,
+      "best_val_acc": 0.9127450980392157,
+      "best_val_loss": 1.2560494244098663,
+      "ckpt_path": "ckpt\\optuna\\trial_5\\best.pth"
+    },
+    {
+      "trial_id": "optuna_trial_6",
+      "status": "ok",
+      "config": {
+        "lr": 3.772836217414545e-05,
+        "weight_decay": 1e-06,
+        "s": 24.0,
+        "label_smoothing": 0.15,
+        "batch_size": 48
+      },
+      "best_epoch": 30,
+      "best_val_acc": 0.8803921568627451,
+      "best_val_loss": 1.6286783543500034,
+      "ckpt_path": "ckpt\\optuna\\trial_6\\best.pth"
+    },
+    {
+      "trial_id": "optuna_trial_7",
+      "status": "ok",
+      "config": {
+        "lr": 0.00039552247179811825,
+        "weight_decay": 5e-05,
+        "s": 24.0,
+        "label_smoothing": 0.1,
+        "batch_size": 16
+      },
+      "best_epoch": 30,
+      "best_val_acc": 0.9362745098039216,
+      "best_val_loss": 1.0404980406165123,
+      "ckpt_path": "ckpt\\optuna\\trial_7\\best.pth"
+    },
+    {
+      "trial_id": "optuna_trial_8",
+      "status": "ok",
+      "config": {
+        "lr": 3.67514938012714e-05,
+        "weight_decay": 0.0001,
+        "s": 10.0,
+        "label_smoothing": 0.05,
+        "batch_size": 48
+      },
+      "best_epoch": 30,
+      "best_val_acc": 0.9068627450980392,
+      "best_val_loss": 1.4932188337499446,
+      "ckpt_path": "ckpt\\optuna\\trial_8\\best.pth"
+    },
+    {
+      "trial_id": "optuna_trial_9",
+      "status": "ok",
+      "config": {
+        "lr": 7.071582046636792e-05,
+        "weight_decay": 1e-06,
+        "s": 16.0,
+        "label_smoothing": 0.05,
+        "batch_size": 48
+      },
+      "best_epoch": 29,
+      "best_val_acc": 0.9176470588235294,
+      "best_val_loss": 0.8186878128485247,
+      "ckpt_path": "ckpt\\optuna\\trial_9\\best.pth"
+    },
+    {
+      "trial_id": "optuna_trial_10",
+      "status": "ok",
+      "config": {
+        "lr": 0.00042958284960462544,
+        "weight_decay": 5e-05,
+        "s": 24.0,
+        "label_smoothing": 0.1,
+        "batch_size": 16
+      },
+      "best_epoch": 23,
+      "best_val_acc": 0.9323529411764706,
+      "best_val_loss": 1.0572753809392452,
+      "ckpt_path": "ckpt\\optuna\\trial_10\\best.pth"
+    },
+    {
+      "trial_id": "optuna_trial_11",
+      "status": "ok",
+      "config": {
+        "lr": 0.00036131172919680527,
+        "weight_decay": 1e-05,
+        "s": 40.0,
+        "label_smoothing": 0.0,
+        "batch_size": 16
+      },
+      "best_epoch": 14,
+      "best_val_acc": 0.9186274509803921,
+      "best_val_loss": 0.31329207122325897,
+      "ckpt_path": "ckpt\\optuna\\trial_11\\best.pth"
+    },
+    {
+      "trial_id": "optuna_trial_12",
+      "status": "ok",
+      "config": {
+        "lr": 0.0002824266502324083,
+        "weight_decay": 5e-05,
+        "s": 40.0,
+        "label_smoothing": 0.1,
+        "batch_size": 16
+      },
+      "best_epoch": 30,
+      "best_val_acc": 0.9392156862745098,
+      "best_val_loss": 1.1324662305414677,
+      "ckpt_path": "ckpt\\optuna\\trial_12\\best.pth"
+    },
+    {
+      "trial_id": "optuna_trial_13",
+      "status": "ok",
+      "config": {
+        "lr": 0.0002412065401004261,
+        "weight_decay": 5e-05,
+        "s": 24.0,
+        "label_smoothing": 0.1,
+        "batch_size": 16
+      },
+      "best_epoch": 21,
+      "best_val_acc": 0.9215686274509803,
+      "best_val_loss": 1.0853254944086075,
+      "ckpt_path": "ckpt\\optuna\\trial_13\\best.pth"
+    },
+    {
+      "trial_id": "optuna_trial_14",
+      "status": "ok",
+      "config": {
+        "lr": 0.0002475981104001328,
+        "weight_decay": 5e-05,
+        "s": 30.0,
+        "label_smoothing": 0.1,
+        "batch_size": 16
+      },
+      "best_epoch": 30,
+      "best_val_acc": 0.9392156862745098,
+      "best_val_loss": 1.0716556049883366,
+      "ckpt_path": "ckpt\\optuna\\trial_14\\best.pth"
+    },
+    {
+      "trial_id": "optuna_trial_15",
+      "status": "ok",
+      "config": {
+        "lr": 0.00025304940713187816,
+        "weight_decay": 5e-05,
+        "s": 30.0,
+        "label_smoothing": 0.1,
+        "batch_size": 16
+      },
+      "best_epoch": 30,
+      "best_val_acc": 0.9284313725490196,
+      "best_val_loss": 1.1047883909195662,
+      "ckpt_path": "ckpt\\optuna\\trial_15\\best.pth"
+    }
+  ],
+  "study_best_value": 0.9392156862745098,
+  "best_config": {
+    "lr": 0.0002824266502324083,
+    "weight_decay": 5e-05,
+    "s": 40,
+    "label_smoothing": 0.1,
+    "batch_size": 16
+  },
+  "n_trials": 16
+}

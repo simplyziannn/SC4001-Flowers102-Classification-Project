@@ -1,0 +1,71 @@
+{
+  "baseline": {
+    "config": {
+      "lr": 0.0001,
+      "weight_decay": 0.0,
+      "s": 30.0,
+      "label_smoothing": 0.0,
+      "batch_size": 32
+    },
+    "ckpt_path": "ckpt/best_cosine_cuda.pth",
+    "test_metrics": {
+      "accuracy": 0.9009595056106684,
+      "macro_avg": {
+        "precision": 0.8910820098338021,
+        "recall": 0.9138738027298148,
+        "f1": 0.8971012201470419
+      },
+      "weighted_avg": {
+        "precision": 0.9120669768322861,
+        "recall": 0.9009595056106684,
+        "f1": 0.9013500707480576
+      }
+    }
+  },
+  "greedy_best": {
+    "config": {
+      "lr": 0.0005,
+      "weight_decay": 5e-05,
+      "s": 16,
+      "label_smoothing": 0.05,
+      "batch_size": 48
+    },
+    "ckpt_path": "ckpt\\greedy\\batch_size\\48\\best.pth",
+    "test_metrics": {
+      "accuracy": 0.9063262319076273,
+      "macro_avg": {
+        "precision": 0.895147245560721,
+        "recall": 0.9211041918038378,
+        "f1": 0.9026885333474438
+      },
+      "weighted_avg": {
+        "precision": 0.9185331915605247,
+        "recall": 0.9063262319076273,
+        "f1": 0.9067019323341532
+      }
+    }
+  },
+  "optuna_best": {
+    "config": {
+      "lr": 0.0002824266502324083,
+      "weight_decay": 5e-05,
+      "s": 40,
+      "label_smoothing": 0.1,
+      "batch_size": 16
+    },
+    "ckpt_path": "ckpt\\optuna\\trial_12\\best.pth",
+    "test_metrics": {
+      "accuracy": 0.9073020003252561,
+      "macro_avg": {
+        "precision": 0.8961640736795836,
+        "recall": 0.922659588111674,
+        "f1": 0.9036218862716462
+      },
+      "weighted_avg": {
+        "precision": 0.9194469541712635,
+        "recall": 0.9073020003252561,
+        "f1": 0.907621612463994
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "best_hyperparameters": {
+    "lr": 0.0005,
+    "weight_decay": 0.0001,
+    "s": 16,
+    "label_smoothing": 0.15,
+    "batch_size": 16
+  },
+  "tuned_test": {
+    "accuracy": 0.902260530167507,
+    "macro_precision": 0.8988277175379984,
+    "macro_recall": 0.9223954968315237,
+    "macro_f1": 0.9041901000301603,
+    "weighted_precision": 0.9176512217518877,
+    "weighted_recall": 0.902260530167507,
+    "weighted_f1": 0.9035304693642994,
+    "n_test": 6149,
+    "ckpt_path": "ckpt\\greedy\\batch_size\\16\\best.pth",
+    "batch_size": 16,
+    "cosine_scale": 16.0
+  },
+  "baseline_test": {
+    "accuracy": 0.9009595056106684,
+    "macro_precision": 0.8910820098338021,
+    "macro_recall": 0.9138738027298148,
+    "macro_f1": 0.8971012201470419,
+    "weighted_precision": 0.9120669768322861,
+    "weighted_recall": 0.9009595056106684,
+    "weighted_f1": 0.9013500707480576,
+    "n_test": 6149,
+    "ckpt_path": "ckpt/best_cosine_cuda.pth",
+    "batch_size": 32,
+    "cosine_scale": 30.0
+  },
+  "delta": {
+    "accuracy_abs": 0.0013010245568385592,
+    "macro_f1_abs": 0.00708887988311846,
+    "accuracy_rel": 0.0014440433212996933,
+    "macro_f1_rel": 0.007901984440458722
+  },
+  "paths": {
+    "greedy_results": "logs/greedy_results.json",
+    "tuned_ckpt": "ckpt\\greedy\\batch_size\\16\\best.pth",
+    "baseline_ckpt": "ckpt/best_cosine_cuda.pth"
+  }
+}

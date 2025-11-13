@@ -1,0 +1,143 @@
+{
+  "k12_baseline": {
+    "num_models": 12,
+    "test_accuracy": 0.9315,
+    "macro_f1": 0.9304,
+    "weighted_f1": 0.9318,
+    "models": [
+      "ensemble_ckpt/k12\\model_fold1.pth",
+      "ensemble_ckpt/k12\\model_fold10.pth",
+      "ensemble_ckpt/k12\\model_fold11.pth",
+      "ensemble_ckpt/k12\\model_fold12.pth",
+      "ensemble_ckpt/k12\\model_fold2.pth",
+      "ensemble_ckpt/k12\\model_fold3.pth",
+      "ensemble_ckpt/k12\\model_fold4.pth",
+      "ensemble_ckpt/k12\\model_fold5.pth",
+      "ensemble_ckpt/k12\\model_fold6.pth",
+      "ensemble_ckpt/k12\\model_fold7.pth",
+      "ensemble_ckpt/k12\\model_fold8.pth",
+      "ensemble_ckpt/k12\\model_fold9.pth"
+    ]
+  },
+  "k12_greedy_HP": {
+    "num_models": 12,
+    "test_accuracy": 0.9346,
+    "macro_f1": 0.9328,
+    "weighted_f1": 0.935,
+    "models": [
+      "12fold_ensemble_ckpt/k12_greedy_HP\\model_fold1.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP\\model_fold10.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP\\model_fold11.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP\\model_fold12.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP\\model_fold2.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP\\model_fold3.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP\\model_fold4.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP\\model_fold5.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP\\model_fold6.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP\\model_fold7.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP\\model_fold8.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP\\model_fold9.pth"
+    ]
+  },
+  "k12_baseline_largetrain": {
+    "num_models": 12,
+    "test_accuracy": 0.9545,
+    "macro_f1": 0.9529,
+    "weighted_f1": 0.9544,
+    "models": [
+      "12fold_ensemble_ckpt/k12_baseline_largetrain/model_fold1.pth",
+      "12fold_ensemble_ckpt/k12_baseline_largetrain/model_fold10.pth",
+      "12fold_ensemble_ckpt/k12_baseline_largetrain/model_fold11.pth",
+      "12fold_ensemble_ckpt/k12_baseline_largetrain/model_fold12.pth",
+      "12fold_ensemble_ckpt/k12_baseline_largetrain/model_fold2.pth",
+      "12fold_ensemble_ckpt/k12_baseline_largetrain/model_fold3.pth",
+      "12fold_ensemble_ckpt/k12_baseline_largetrain/model_fold4.pth",
+      "12fold_ensemble_ckpt/k12_baseline_largetrain/model_fold5.pth",
+      "12fold_ensemble_ckpt/k12_baseline_largetrain/model_fold6.pth",
+      "12fold_ensemble_ckpt/k12_baseline_largetrain/model_fold7.pth",
+      "12fold_ensemble_ckpt/k12_baseline_largetrain/model_fold8.pth",
+      "12fold_ensemble_ckpt/k12_baseline_largetrain/model_fold9.pth"
+    ]
+  },
+  "k12_greedy_HP_largetrain": {
+    "num_models": 12,
+    "test_accuracy": 0.9645,
+    "macro_f1": 0.9638,
+    "weighted_f1": 0.9649,
+    "models": [
+      "12fold_ensemble_ckpt/k12_greedy_HP_largetrain/model_fold1.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP_largetrain/model_fold10.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP_largetrain/model_fold11.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP_largetrain/model_fold12.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP_largetrain/model_fold2.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP_largetrain/model_fold3.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP_largetrain/model_fold4.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP_largetrain/model_fold5.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP_largetrain/model_fold6.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP_largetrain/model_fold7.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP_largetrain/model_fold8.pth",
+      "12fold_ensemble_ckpt/k12_greedy_HP_largetrain/model_fold9.pth"
+    ]
+  },
+  "k12_optuna_HP": {
+    "num_models": 12,
+    "test_accuracy": 0.9436,
+    "macro_f1": 0.9422,
+    "weighted_f1": 0.9439,
+    "models": [
+      "12fold_ensemble_ckpt/k12_optuna_HP\\model_fold1.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP\\model_fold10.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP\\model_fold11.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP\\model_fold12.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP\\model_fold2.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP\\model_fold3.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP\\model_fold4.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP\\model_fold5.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP\\model_fold6.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP\\model_fold7.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP\\model_fold8.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP\\model_fold9.pth"
+    ]
+  },
+  "k12_optuna_HP_largetrain": {
+    "num_models": 12,
+    "test_accuracy": 0.9689,
+    "macro_f1": 0.9672,
+    "weighted_f1": 0.9692,
+    "models": [
+      "12fold_ensemble_ckpt/k12_optuna_HP_largetrain\\model_fold1.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP_largetrain\\model_fold10.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP_largetrain\\model_fold11.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP_largetrain\\model_fold12.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP_largetrain\\model_fold2.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP_largetrain\\model_fold3.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP_largetrain\\model_fold4.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP_largetrain\\model_fold5.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP_largetrain\\model_fold6.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP_largetrain\\model_fold7.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP_largetrain\\model_fold8.pth",
+      "12fold_ensemble_ckpt/k12_optuna_HP_largetrain\\model_fold9.pth"
+    ]
+  },
+  "_disabled_12fold_optuna_siamese_5shot": {
+    "num_models": 12,
+    "test_accuracy": 0.4736,
+    "macro_f1": 0.4742,
+    "weighted_f1": 0.4745,
+    "models": [
+      "12fold_ensemble_ckpt/12fold_optuna_siamese_5shot\\model_fold1.pth",
+      "12fold_ensemble_ckpt/12fold_optuna_siamese_5shot\\model_fold10.pth",
+      "12fold_ensemble_ckpt/12fold_optuna_siamese_5shot\\model_fold11.pth",
+      "12fold_ensemble_ckpt/12fold_optuna_siamese_5shot\\model_fold12.pth",
+      "12fold_ensemble_ckpt/12fold_optuna_siamese_5shot\\model_fold2.pth",
+      "12fold_ensemble_ckpt/12fold_optuna_siamese_5shot\\model_fold3.pth",
+      "12fold_ensemble_ckpt/12fold_optuna_siamese_5shot\\model_fold4.pth",
+      "12fold_ensemble_ckpt/12fold_optuna_siamese_5shot\\model_fold5.pth",
+      "12fold_ensemble_ckpt/12fold_optuna_siamese_5shot\\model_fold6.pth",
+      "12fold_ensemble_ckpt/12fold_optuna_siamese_5shot\\model_fold7.pth",
+      "12fold_ensemble_ckpt/12fold_optuna_siamese_5shot\\model_fold8.pth",
+      "12fold_ensemble_ckpt/12fold_optuna_siamese_5shot\\model_fold9.pth"
+    ],
+    "ensemble_method": "model_voting_with_prob_tiebreakers"
+  }
+}
