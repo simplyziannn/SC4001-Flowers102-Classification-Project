@@ -57,6 +57,8 @@ Contains plots and summaries for:
 ---
 
 ## Repository Structure
+
+```
 ├── flowers_common.py
 ├── project_full_pipeline (Baseline+fewshot).ipynb
 ├── project_full_pipeline (hyperparameter finetuning).ipynb
@@ -66,6 +68,7 @@ Contains plots and summaries for:
 ├── data/
 ├── utils/
 └── README.md
+```
 ---
 
 ## Requirements
