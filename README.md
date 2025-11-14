@@ -33,7 +33,7 @@ For example:
 ```pip install torch==2.9.0+cu121 torchvision==0.24.0+cu121 torchaudio==2.9.0+cu121 \--index-url https://download.pytorch.org/whl/cu121```
 
 **CUDA 11.8**
-```pip install torch==2.9.0+cu118 torchvision==0.24.0+cu118 torchaudio==2.9.0+cu118 \--index-url https://download.pytorch.org/whl/cu118`` 
+```pip install torch==2.9.0+cu118 torchvision==0.24.0+cu118 torchaudio==2.9.0+cu118 \--index-url https://download.pytorch.org/whl/cu118``` 
 
 If your version is not above you can refer to https://download.pytorch.org to find whoich pytorch wheels to download. 
 
@@ -182,4 +182,5 @@ Produce clean figures for reports, publications, and presentations.
 8. Combine Siamese metric learning method with 12-fold model and assess performance
 
 9. Visualize all results
+
 
