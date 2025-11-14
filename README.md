@@ -1,81 +1,166 @@
-# SC4001 – Flowers102 Classification Project
-Complete Baseline, Augmentation, Tuning, Ensemble, and Few-Shot Pipeline
+# Environment Setup
+This project requires **Python 3.13.5**. 
 
-This repository contains the full workflow for the SC4001 Neural Networks and Deep Learning project.  
-The goal is to classify the Oxford Flowers-102 dataset using both supervised transfer learning and metric-learning approaches.
+We have intentionally not installed packages using pip install -r requirements.txt because certain dependencies especially the PyTorch CUDA wheels which cannot be resolved correctly through the default pip index. This leads to installation failures when attempting to build a virtual environment directly from ```requirements.txt``` (e.g., in VS Code’s “Create Virtual Environment from Requirements.txt” feature).
 
-The project is organised into the following notebooks:
+For this project, the ```requirements.txt``` file is included only as a reference to show the full list of dependencies used.
+To ensure reliable installation, **please follow the manual installation steps below** instead of installing everything from the requirements file.
 
-1. project_full_pipeline (Baseline+fewshot).ipynb  
-2. project_full_pipeline (hyperparameter finetuning).ipynb  
-3. project_full_pipeline (ensemble).ipynb  
-4. project_ful_pipeline(Visualization).ipynb  
-5. flowers_common.py (shared utilities)
+Instead, create and install dependencies manually using the terminal.
 
----
+### 1. Create a python virtual environment
+```python -m venv .venv```
+### 2. Activate python virtual environment once created
+```.\.venv\Scripts\activate```
 
-## 1. Baseline and Few-Shot Models
-Baseline (no augmentation): ResNet-50 with a cosine classifier, achieving 78.78%.  
-Augmented baseline: Adds cropping, flipping, colour jitter, and rotation, improving accuracy to 90.32%.
+### 3. Install PyTorch **before everything else** using the official CUDA wheel index:
+```pip install torch==2.9.0+cu126 torchvision==0.24.0+cu126 torchaudio==2.9.0+cu126 --index-url https://download.pytorch.org/whl/cu126```
 
-Few-Shot Models:
-- Siamese Network (contrastive loss)  
-  - 1-shot: 96.66%  
-  - 5-shot: 98.34%
-- Triplet Network (triplet loss, margin 0.8)  
-  - 1-shot: 96.72%  
-  - 5-shot: 98.26%
+This ensures GPU acceleration and prevents the installation errors that occur when pip tries to pull a CPU-only wheel. 
 
-Few-shot methods outperform all supervised models except the largest ensemble.
+### 4. Install the rest of the packages
+```pip install matplotlib numpy optuna pandas Pillow scikit-learn scipy tqdm joblib networkx```
 
----
+# Notebook Overview
+## 1. Baseline+fewshot.ipynb — Baseline Model & Few-Shot Metric Learning
 
-## 2. Hyperparameter Tuning
-Performed using:
-- Greedy coordinate search  
-- Optuna TPE joint search  
+This notebook establishes the foundations of the project:
 
-Optuna produced the best supervised single-model result at 91.97%.
+**Key components**
 
----
+Baseline classifier using a ResNet backbone.
 
-## 3. K-Fold Ensembles
-A complete ensemble study was run with k = 1 to 15.  
-Final predictions were obtained via softmax probability averaging.
+Deterministic data augmentation pipeline for reproducible experiments.
 
-The best supervised model is the 12-fold large-train Optuna ensemble (96.89%).
+Few-shot setups (1-shot and 5-shot) using:
 
----
+Siamese networks with Contrastive Loss
 
-## 4. Visualization Notebook
-Contains plots and summaries for:
-- Training and validation curves  
-- Confusion matrices  
-- Hyperparameter search results  
-- Ensemble accuracy trends  
+Triplet networks with Triplet Loss
 
----
+**Purpose:**
 
-## Repository Structure
+Establish a baseline accuracy to compare other approaches.
 
-```
-├── flowers_common.py
-├── project_full_pipeline (Baseline+fewshot).ipynb
-├── project_full_pipeline (hyperparameter finetuning).ipynb
-├── project_full_pipeline (ensemble).ipynb
-├── project_ful_pipeline(Visualization).ipynb
-├── ckpt/
-├── data/
-├── utils/
-└── README.md
-```
----
+Compare baseline with Data augmentation and with no data augmentation
 
-## Requirements
-- Python 3.10+  
-- PyTorch  
-- torchvision  
-- numpy  
-- matplotlib  
-- tqdm  
-- optuna  
+Evaluate how metric learning performs with extremely limited data.
+
+
+## 2. Hyperparameter Finetuning.ipynb — Greedy Search vs Optuna Optimization
+
+This notebook focuses on systematically tuning the model.
+
+Two hyperparameter optimization approaches
+
+**(1) Greedy Hyperparameter Search:**
+
+Sequentially optimizes each parameter.
+
+Fast and simple.
+
+Provides interpretable tuning trajectories.
+
+**(2) Optuna Optimization:**
+
+Explores the hyperparameter space more efficiently.
+
+Produces better minima on most trials.
+
+**Purpose:**
+
+Compare how Greedy vs Optuna differ in:
+
+performance and convergence behavior
+
+Select the best performing parameter sets to be applied later in the ensemble phase.
+
+
+## 3. Ensemble_Experiments.ipynb — Ensemble Models (k = 1 to 15)
+
+This notebook conducts all experiments involving k-fold ensembling.
+
+What is done here
+
+Build ensembles ranging from k = 1 to k = 15.
+
+For each k:
+
+Train k models, each on different folds.
+
+Evaluate ensemble accuracy, macro-F1, and weighted-F1.
+
+Identify the optimal ensemble size.
+
+**Key findings:**
+
+k = 12 provides the best test accuracy results.
+
+Both greedy-tuned and Optuna-tuned hyperparameters are applied to 12-fold ensembles.
+
+12-fold Optuna-tuned model produced the best resuts compared to greedy and baseline 12 fold models. 
+
+The 12-fold Optuna-tuned model becomes the final reference model.
+
+**Large-train configuration:**
+
+Combine train + validation into a single large dataset.
+
+Re-train the 12 models with fold-based validation inside the loop.
+
+This creates the strongest possible ensemble prior to final testing. 
+
+12-fold Optuna-tuned model trained on large-train configuration produced the best results overall for all supervised classification ensemble models in this experiment. 
+
+**Metric Learning vs Ensembling:**
+
+Finally, in this notebook:
+
+Test 12-fold 5-shot Siamese (Contrastive Loss) performance
+
+Compare directly against the 12-fold Optuna ensemble
+
+This answers the key research question:
+Can we combine metric learning methods with the earlier ensemble strategies to improve performance?
+
+
+## 4. Visualization.ipynb — Analysis & Plotting
+
+This notebook is meant to be run last.
+
+**Provides visualizations for:**
+
+Hyperparameter trajectories (Greedy vs Optuna)
+
+Ensemble accuracy curves for k = 1 to 15
+
+Distribution of folds and performance variance
+
+
+**Purpose**
+
+Summarize insights from the entire research pipeline.
+
+Produce clean figures for reports, publications, and presentations.
+
+
+# Experimental Pipeline
+
+1. Train baseline model
+
+2. Run Siamese / Triplet few-shot experiments
+
+3. Perform greedy + Optuna hyperparameter tuning
+
+4. Run ensemble experiments k = 1 to 15
+
+5. Select best k (found to be k = 12)
+
+6. Apply best hyperparameters to 12-fold models
+
+7. Train large-train 12-fold ensembles
+
+8. Combine Siamese metric learning method with 12-fold model and assess performance
+
+9. Visualize all results
+

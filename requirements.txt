@@ -1,0 +1,29 @@
+# -------------------------------------------------------------------------
+# This requirements.txt is provided *only as a reference* to list
+# all dependencies used in this project.
+#
+# Do NOT run:
+#     pip install -r requirements.txt
+#
+# Some packages (especially PyTorch CUDA wheels) cannot be resolved
+# through the default PyPI index and must be installed manually.
+# Please follow the manual installation steps in the README instead.
+# -------------------------------------------------------------------------
+
+# PyTorch CUDA 12.6 wheels (must be installed manually using the command below)
+# pip install torch==2.9.0+cu126 torchvision==0.24.0+cu126 torchaudio==2.9.0+cu126 --index-url https://download.pytorch.org/whl/cu126
+torch==2.9.0+cu126
+torchvision==0.24.0+cu126
+torchaudio==2.9.0+cu126
+
+
+matplotlib
+numpy
+optuna
+pandas
+Pillow
+scikit-learn
+scipy
+tqdm
+joblib
+networkx
