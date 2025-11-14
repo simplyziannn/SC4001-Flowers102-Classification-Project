@@ -24,16 +24,16 @@ In this example, CUDA version is 12.6
 ### 4. Install PyTorch according to your CUDA version **before everything else** using the official CUDA wheel index:
 For example: 
 **CUDA 12.6**
-```pip install torch==2.9.0+cu126 torchvision==0.24.0+cu126 torchaudio==2.9.0+cu126 \--index-url https://download.pytorch.org/whl/cu126``` 
+```pip install torch==2.9.0+cu126 torchvision==0.24.0+cu126 torchaudio==2.9.0+cu126 --index-url https://download.pytorch.org/whl/cu126``` 
 
 **CUDA 12.4**
-```pip install torch==2.9.0+cu124 torchvision==0.24.0+cu124 torchaudio==2.9.0+cu124 \--index-url https://download.pytorch.org/whl/cu124```
+```pip install torch==2.9.0+cu124 torchvision==0.24.0+cu124 torchaudio==2.9.0+cu124 --index-url https://download.pytorch.org/whl/cu124```
 
 **CUDA 12.1**
-```pip install torch==2.9.0+cu121 torchvision==0.24.0+cu121 torchaudio==2.9.0+cu121 \--index-url https://download.pytorch.org/whl/cu121```
+```pip install torch==2.9.0+cu121 torchvision==0.24.0+cu121 torchaudio==2.9.0+cu121 --index-url https://download.pytorch.org/whl/cu121```
 
 **CUDA 11.8**
-```pip install torch==2.9.0+cu118 torchvision==0.24.0+cu118 torchaudio==2.9.0+cu118 \--index-url https://download.pytorch.org/whl/cu118``` 
+```pip install torch==2.9.0+cu118 torchvision==0.24.0+cu118 torchaudio==2.9.0+cu118 --index-url https://download.pytorch.org/whl/cu118``` 
 
 If your version is not above you can refer to https://download.pytorch.org to find whoich pytorch wheels to download. 
 
