@@ -13,12 +13,31 @@ Instead, create and install dependencies manually using the terminal.
 ### 2. Activate python virtual environment once created
 ```.\.venv\Scripts\activate```
 
-### 3. Install PyTorch **before everything else** using the official CUDA wheel index:
-```pip install torch==2.9.0+cu126 torchvision==0.24.0+cu126 torchaudio==2.9.0+cu126 --index-url https://download.pytorch.org/whl/cu126```
+### 3. Check your CUDA version (Do note you need an Nvidia GPU!) 
+Run following command 
+```nvidia-smi```
 
-This ensures GPU acceleration and prevents the installation errors that occur when pip tries to pull a CPU-only wheel. 
+Then look at the line labeled CUDA Version in the output. 
+```| NVIDIA-SMI 550.90.07    Driver Version: 550.90.07    CUDA Version: 12.6     |``` 
+In this example, CUDA version is 12.6 
 
-### 4. Install the rest of the packages
+### 4. Install PyTorch according to your CUDA version **before everything else** using the official CUDA wheel index:
+For example: 
+**CUDA 12.6**
+```pip install torch==2.9.0+cu126 torchvision==0.24.0+cu126 torchaudio==2.9.0+cu126 \--index-url https://download.pytorch.org/whl/cu126``` 
+
+**CUDA 12.4**
+```pip install torch==2.9.0+cu124 torchvision==0.24.0+cu124 torchaudio==2.9.0+cu124 \--index-url https://download.pytorch.org/whl/cu124```
+
+**CUDA 12.1**
+```pip install torch==2.9.0+cu121 torchvision==0.24.0+cu121 torchaudio==2.9.0+cu121 \--index-url https://download.pytorch.org/whl/cu121```
+
+**CUDA 11.8**
+```pip install torch==2.9.0+cu118 torchvision==0.24.0+cu118 torchaudio==2.9.0+cu118 \--index-url https://download.pytorch.org/whl/cu118`` 
+
+If your version is not above you can refer to https://download.pytorch.org to find whoich pytorch wheels to download. 
+
+### 5. Install the rest of the packages
 ```pip install matplotlib numpy optuna pandas Pillow scikit-learn scipy tqdm joblib networkx```
 
 # Notebook Overview
